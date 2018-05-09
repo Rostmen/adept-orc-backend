@@ -8,8 +8,8 @@ public func routes(_ router: Router) throws {
     }
 
     // Example of configuring a controller
-    let todoController = TodoController()
-    router.get("todos", use: todoController.index)
-    router.post("todos", use: todoController.create)
-    router.delete("todos", Todo.parameter, use: todoController.delete)
+    let controller = MedicalRecordController()
+    router.get("medical_records", use: controller.index)
+    router.post("medical_records", use: controller.create)
+    router.delete("medical_records", MedicalRecord.parameter, use: controller.delete)
 }
